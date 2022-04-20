@@ -2,6 +2,8 @@
 __pycache__/
 *.py[cod]
 *$py.class
+# 添加忽略.idea文件
+.idea
 
 # C extensions
 *.so
