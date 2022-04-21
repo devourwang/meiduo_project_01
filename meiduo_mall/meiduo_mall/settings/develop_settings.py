@@ -50,6 +50,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'meiduo_mall.urls'
 
+# 配置jinja2模板引擎
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.jinja2.Jinja2',  # 配置jinja2模板引擎
@@ -85,6 +86,7 @@ WSGI_APPLICATION = 'meiduo_mall.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
+# 配置MySQL数据库
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
@@ -158,6 +160,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = 'static/'
+
+# 配置静态文件
+STATICFILES_DIRS = [
+    BASE_DIR / 'static',
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
