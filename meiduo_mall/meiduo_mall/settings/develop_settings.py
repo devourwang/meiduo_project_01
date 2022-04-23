@@ -12,12 +12,13 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
-import sys
+import sys, os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-print(BASE_DIR)
-# print(sys.path)
+# print(BASE_DIR)
+# print(type(BASE_DIR))
+sys.path.insert(0, os.fspath(BASE_DIR / 'apps'))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
@@ -39,7 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'meiduo_mall.apps.users',
+    # 'meiduo_mall.apps.users',
+    'users'
 ]
 
 MIDDLEWARE = [
